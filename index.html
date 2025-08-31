@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sicillian — Oyun Topluluğu</title>
+    <meta name="description" content="Sicillian: CS2, Valorant, GTA RP ve daha fazlası için dinamik oyun topluluğu." />
+
+    <link rel="preload" href="logo.png" as="image">
+    <link rel="preload" href="galeri1.jpg" as="image">
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="Sicillian — Oyun Topluluğu">
+    <meta property="og:description" content="CS2, Valorant, GTA RP ve daha fazlası. Ekibimize katıl!">
+    <meta property="og:image" content="logo.png">
+</head>
+<body>
+    <div id="app" class="theme-dark">
+
+        <div class="loader" id="loader" aria-hidden="true">
+            <div class="loader__inner">
+                <img src="logo.png" alt="Sicillian logo" class="loader__img" />
+                <div class="loader__text">
+                    <strong>Sicillian</strong>
+                    <div class="loader__dots"><span></span><span></span><span></span></div>
+                </div>
+            </div>
+        </div>
+
+        <header id="site-header" class="site-header" role="banner">
+            <div class="container header-inner">
+                <a href="#hero" class="brand" aria-label="Sicillian ana sayfa">
+                    <img src="logo.png" alt="" class="brand__img">
+                    <span class="brand__title">Sicillian</span>
+                </a>
+
+                <nav class="nav" aria-label="Ana Menü">
+                    <ul class="nav__list">
+                        <li><a href="#hero">Ana Sayfa</a></li>
+                        <li><a href="#about">Hakkımızda</a></li>
+                        <li><a href="#news">Haberler</a></li>
+                        <li><a href="#gallery">Galeri</a></li>
+                        <li><a href="#contact">İletişim</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <button id="burger" class="burger" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+                </div>
+            </div>
+
+            <div id="mobileDrawer" class="mobile-drawer" hidden aria-hidden="true">
+                <ul class="mobile-links">
+                    <li><a class="drawer-link" href="#hero">Ana Sayfa</a></li>
+                    <li><a class="drawer-link" href="#about">Hakkımızda</a></li>
+                    <li><a class="drawer-link" href="#news">Haberler</a></li>
+                    <li><a class="drawer-link" href="#gallery">Galeri</a></li>
+                    <li><a class="drawer-link" href="#contact">İletişim</a></li>
+                    <li><a class="btn btn--accent" href="https://discord.gg/Sicillian" target="_blank" rel="noopener">Discord</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            <section id="hero" class="hero">
+                <div class="container hero-wrap reveal">
+                    <div class="hero-left">
+                        <h1 class="hero-title">Sicillian — <span class="accent">Oyun Topluluğu</span></h1>
+                        <p class="hero-desc">Sınırsız eğlence, güçlü takım ruhu ve unutulmaz anılar için aramıza katıl.</p>
+        
+                        <div class="cta-row">
+                            <a href="https://discord.gg/Sicillian" class="btn btn--accent large" target="_blank" rel="noopener">Bizimle Tanış</a>
+                            <a href="#gallery" class="btn ghost">Galeriyi Gör</a>
+                        </div>
+                    </div>
+        
+                    <aside class="hero-right" aria-hidden="false">
+                        <iframe src="https://discord.com/widget?id=1376531299619311688&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                    </aside>
+                </div>
+            </section>
+
+            <section id="about" class="section container reveal">
+                <h2>Hakkımızda</h2>
+                <p class="lead">Sicillian, birçok farklı oyunda aktif olan, eğlenceyi ve takım ruhunu merkezine alan bir <strong>oyuncu topluluğudur</strong>. Yeni gelenlere her zaman açığız.</p>
+        
+                <div class="cards">
+                    <article class="card">
+                        <h3>CS2</h3>
+                    </article>
+                    <article class="card">
+                        <h3>Valorant</h3>
+                    </article>
+                    <article class="card">
+                        <h3>GTA RP</h3>
+                    </article>
+                    <article class="card">
+                        <h3>Sınırsız Sohbet</h3>
+                    </article>
+                    <article class="card">
+                        <h3>Ve Dahası...</h3>
+                    </article>
+                </div>
+            </section>
+        
+            <section id="news" class="section container reveal">
+                <h2>Haberler & Duyurular</h2>
+                <div id="news-container" class="news-grid">
+                    </div>
+            </section>
+        
+            <section id="gallery" class="section gallery-section reveal">
+                <div class="container">
+                    <h2>Galeri</h2>
+        
+                    <div class="gallery">
+                        <button class="gbtn prev" id="prevBtn" aria-label="Önceki">‹</button>
+        
+                        <div class="gallery-main" id="galleryMain" tabindex="0" aria-roledescription="carousel">
+                            <img id="mainImg" src="galeri1.jpg" alt="Galeri resmi" loading="lazy">
+                            <div id="mainCaption" class="caption">Sicillian etkinlik görüntüsü</div>
+                        </div>
+        
+                        <div class="gallery-thumbs" id="thumbs" role="list">
+                            <button class="thumb active" data-src="galeri1.jpg" data-caption="Etkinlik 1" aria-label="Resim 1"></button>
+                            <button class="thumb" data-src="galeri2.jpg" data-caption="Etkinlik 2" aria-label="Resim 2"></button>
+                            <button class="thumb" data-src="galeri3.jpg" data-caption="Etkinlik 3" aria-label="Resim 3"></button>
+                        </div>
+        
+                        <button class="gbtn next" id="nextBtn" aria-label="Sonraki">›</button>
+                    </div>
+        
+                    <div class="gallery-controls">
+                        <button id="autoplayToggle" class="btn">Otomatik: <span id="autoState">Açık</span></button>
+                        <button id="openLightbox" class="btn ghost">Büyüt</button>
+                    </div>
+                </div>
+            </section>
+        
+            <section id="contact" class="section container reveal">
+                <h2>İletişim</h2>
+                <p class="lead">Bize Discord üzerinden ulaşabilirsiniz. Herkese açık destek kanalı mevcut.</p>
+                <a class="btn btn--accent" href="https://discord.gg/Sicillian" target="_blank" rel="noopener">Discord'a Katıl</a>
+            </section>
+        </main>
+
+        <div id="lightbox" class="lightbox" role="dialog" aria-hidden="true">
+            <button id="lbClose" class="lightbox-close" aria-label="Kapat">✕</button>
+            <img id="lbImg" src="" alt="Büyük Görsel">
+            <div id="lbCaption" class="lb-caption"></div>
+        </div>
+
+        <div id="toast" class="toast" aria-live="polite" aria-atomic="true"></div>
+
+        <button id="backTop" class="back-top" aria-label="Başa dön">↑</button>
+
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <p>&copy; 2025 Sicillian.</p>
+                <p>Designed with ❤️ by <strong>auren Development</strong></p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
